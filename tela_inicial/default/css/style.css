@@ -175,7 +175,8 @@ li a{
   top: 40px;
   right: 10px;
   z-index: 99;
-  background-image: url(../../assets/printer.png);
+  background-image: url(../../assets/printer.svg);
+  background-size: 38px;
   width: 36px;
   height: 37px;
   border-radius: 50%;
@@ -197,6 +198,7 @@ li a{
   background-color: #2d6475;
   font-weight: 500;
   background-image: url(../../assets/printer.svg);
+  background-size: 25px;
   background-repeat: no-repeat;
   background-position: 10px center;
 }
@@ -222,7 +224,7 @@ li a{
   background-color: #2d6475;
   border-radius: 15px;
   background-position: center center;
-  background-size: 15px;
+  background-size: 100%;
   background-repeat: no-repeat;
   margin-right: 5px;
   margin-left: -10px;  
@@ -454,7 +456,8 @@ ul {
   height: 65px;  
 }
 .dropdown.dropdown-bubble{
-  background: url('../../assets/direcionais.png') no-repeat right 10px bottom 10px;
+  background: url('../../assets/direcionais.svg') no-repeat right 10px bottom 10px;
+  background-size: 35px;
 }
 .show {
   position: relative;
@@ -593,8 +596,8 @@ ul {
   background-color: unset;
 }
 
-.voltar-topo{
-  margin-top: 20px;
+.voltar-topo img{
+  height: 60px;
 }
 
 .mover-fazer{
@@ -675,7 +678,7 @@ ul {
   width: 500px;
 }
 .circulo-2 {
-  background-color: #fed06e;
+  background-color: #207893;
   height: 250px;
   width: 250px;
   border-radius: 50%;
@@ -689,7 +692,7 @@ ul {
   right: -140px;
 }
 .circulo-4 {
-  background-color: #fed06e;
+  background-color: #207893;
   height: 150px;
   width: 150px;
   border-radius: 50%;

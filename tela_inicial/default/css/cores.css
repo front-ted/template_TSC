@@ -4,16 +4,16 @@
 */
 :root{
 	--bg-gradiente-primario: rgb(11,58,74);
-	--gradiente-primario: linear-gradient(30deg, rgba(11,58,74,1) 10%, rgba(50,176,175,1) 50%, rgba(252,208,109,1) 92%);
+	--gradiente-primario: linear-gradient(30deg, rgba(11,58,74,1) 10%, rgba(32, 120, 147, 1) 50%, rgba(146, 172, 206, 1) 92%);
 
 	--gradiente-borda: linear-gradient(#fff, #fff) padding-box,
-	linear-gradient(80deg, rgba(11,58,74,1) 10%, rgba(50,176,175,1) 50%, rgba(252,208,109,1) 92%) border-box;
+	linear-gradient(80deg, rgba(11,58,74,1) 10%, rgba(32, 120, 147, 1) 50%, rgba(146, 172, 206, 1) 92%) border-box;
 
-	--bg-gradiente-secundario: rgb(80,215,226);
-	--gradiente-secundario: linear-gradient(60deg, rgba(80,215,226,1) 0%, rgba(46,137,151,1) 18%, rgba(11,59,75,1) 100%);
+	--bg-gradiente-secundario: rgb(146, 172, 206);
+	--gradiente-secundario: linear-gradient(60deg, rgba(146, 172, 206, 1) 0%, rgba(32, 120, 147, 1) 18%, rgba(11,59,75,1) 100%);
 
-	--cor-primaria: #1e8cb1;
-	--cor-secundaria: #e0a945;
+	--cor-primaria: #207893;
+	--cor-secundaria: #92ACCE;
 }
 
 /*elementos que levam gradiente primário - três cores*/
