@@ -3,7 +3,7 @@
     border-radius: 25px;
     border-width: 4px;
     border-style: solid;
-    width: 90%;
+    width: 95%;
     margin: 50px auto;
     min-height: 250px;
     position: relative;
@@ -13,11 +13,12 @@
     content:'';
     background: url('../images/asset_circulo.svg') no-repeat;
     background-size: contain;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     top: -50px;
     right: -50px;
+    z-index: 1;
 }
 .bg-podcast > div::after{
     content:'';
@@ -27,31 +28,35 @@
     position: absolute;
     bottom: -50px;
 }
+.bg-podcast > div{
+    position: relative;
+    z-index: 2;
+}
 .bg-podcast p{margin: 0;}
 .audio-player{
     color: #000;
     padding: 8px 20px;
-    line-height: 0;
     margin: 20px 0;
     max-width: 250px;
+    margin-bottom: 50px;
 }
 .audio-player::before{
     content:'';
-    background: url('../images/podcast_1.svg') no-repeat;
-    height: 260px;
-    width: 260px;
+    background: url('../images/podcast_esq.png') no-repeat;
+    height: 217px;
+    width: 220px;
     position: absolute;
-    left: -20px;
-    bottom: -5px;
+    left: -32px;
+    bottom: -24px;
 }
 .audio-player::after{
     content:'';
-    background: url('../images/podcast_2.svg') no-repeat;
-    height: 260px;
-    width: 260px;
+    background: url('../images/podcast_dir.png') no-repeat;
+    height: 217px;
+    width: 235px;
     position: absolute;
-    right: -20px;
-    bottom: -2px;
+    right: -32px;
+    bottom: -24px;
     z-index: 2;
 }
 .audio-player .timestamp{
@@ -174,6 +179,32 @@
     background: #004E52;
 }
 
+/*Transcrição de áudios dentro das modais*/
+.modal .bg-podcast > div::after{display: none;}
+.modal .accordion-transcricao{
+    width: 90%;
+    margin: auto;
+    margin-top: -53px;
+    padding-left: 30px;
+}
+/*Transcrição de áudios dentro das modais*/
+
+/*áudio*/
+.bg-podcast.audio::after, .bg-podcast.audio > div::after,
+.audio .audio-player::before, .audio .audio-player::after {
+    display: none;
+}
+.bg-podcast.audio{
+    max-width: 300px;
+    min-height: 220px;
+}
+.audio .audio-player{
+    margin: 0;
+}
+
+@media screen and (max-width: 1200px){
+    .modal .accordion-transcricao{padding-left: 0;}
+}
 @media screen and (max-width: 840px){
     .bg-podcast > div::after{display: none;}
     .bg-podcast{
