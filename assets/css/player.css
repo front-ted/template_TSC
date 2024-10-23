@@ -43,8 +43,8 @@
 .audio-player::before{
     content:'';
     background: url('../images/podcast_esq.png') no-repeat;
-    height: 217px;
-    width: 220px;
+    height: 179px;
+    width: 185px;
     position: absolute;
     left: -32px;
     bottom: -24px;
@@ -52,8 +52,8 @@
 .audio-player::after{
     content:'';
     background: url('../images/podcast_dir.png') no-repeat;
-    height: 217px;
-    width: 235px;
+    height: 188px;
+    width: 193px;
     position: absolute;
     right: -32px;
     bottom: -24px;
