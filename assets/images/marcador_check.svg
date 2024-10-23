@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.77 9.27">
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.77 9.27">
   <defs>
     <style>
       .cls-1 {
-        fill: #92acce;
+        fill: #002e3b;
       }
 
       .cls-1, .cls-2 {
@@ -11,14 +11,10 @@
       }
 
       .cls-2 {
-        fill: #004684;
+        fill: #92acce;
       }
     </style>
   </defs>
-  <g id="Camada_1-2" data-name="Camada 1">
-    <g>
-      <circle class="cls-1" cx="4.31" cy="4.96" r="4.31"/>
-      <path class="cls-2" d="M4.43,7.65L.77,3.99l1.32-1.32,2.34,2.35L9.45,0l1.32,1.31-6.34,6.34Z"/>
-    </g>
-  </g>
+  <circle class="cls-2" cx="4.31" cy="4.96" r="4.31"/>
+  <path class="cls-1" d="M4.43,7.65L.77,3.99l1.32-1.32,2.34,2.35L9.45,0l1.32,1.31-6.34,6.34Z"/>
 </svg>

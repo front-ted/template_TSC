@@ -3,24 +3,106 @@
   <defs>
     <style>
       .cls-1 {
-        filter: url(#drop-shadow-167);
+        stroke: url(#Gradiente_sem_nome_7);
       }
 
-      .cls-2 {
-        fill: #92acce;
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        stroke-miterlimit: 10;
+        stroke-width: 9px;
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2, .cls-12 {
         stroke-width: 0px;
       }
+
+      .cls-12 {
+        fill: #92acce;
+      }
+
+      .cls-3 {
+        stroke: url(#Gradiente_sem_nome_7-8);
+      }
+
+      .cls-4 {
+        stroke: url(#Gradiente_sem_nome_7-9);
+      }
+
+      .cls-5 {
+        stroke: url(#Gradiente_sem_nome_7-6);
+      }
+
+      .cls-6 {
+        stroke: url(#Gradiente_sem_nome_7-7);
+      }
+
+      .cls-7 {
+        stroke: url(#Gradiente_sem_nome_7-3);
+      }
+
+      .cls-8 {
+        stroke: url(#Gradiente_sem_nome_7-2);
+      }
+
+      .cls-9 {
+        stroke: url(#Gradiente_sem_nome_7-5);
+      }
+
+      .cls-10 {
+        stroke: url(#Gradiente_sem_nome_7-4);
+      }
+
+      .cls-13 {
+        filter: url(#drop-shadow-55);
+      }
     </style>
-    <filter id="drop-shadow-167" filterUnits="userSpaceOnUse">
+    <clipPath id="clippath">
+      <circle class="cls-2" cx="66.59" cy="315.95" r="99.04"/>
+    </clipPath>
+    <linearGradient id="Gradiente_sem_nome_7" data-name="Gradiente sem nome 7" x1="-29.57" y1="18.34" x2="198.48" y2="18.34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#92acce"/>
+      <stop offset="1" stop-color="#207893"/>
+    </linearGradient>
+    <linearGradient id="Gradiente_sem_nome_7-2" data-name="Gradiente sem nome 7" x1="-27.82" y1="-6.61" x2="200.23" y2="-6.61" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-3" data-name="Gradiente sem nome 7" x1="-26.14" y1="-30.57" x2="201.91" y2="-30.57" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-4" data-name="Gradiente sem nome 7" x1="-24.46" y1="-54.52" x2="203.59" y2="-54.52" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-5" data-name="Gradiente sem nome 7" x1="-22.71" y1="-79.47" x2="205.34" y2="-79.47" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-6" data-name="Gradiente sem nome 7" x1="-36.43" y1="116.14" x2="191.62" y2="116.14" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-7" data-name="Gradiente sem nome 7" x1="-34.76" y1="91.69" x2="193.38" y2="91.69" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-8" data-name="Gradiente sem nome 7" x1="-33" y1="67.24" x2="195.05" y2="67.24" xlink:href="#Gradiente_sem_nome_7"/>
+    <linearGradient id="Gradiente_sem_nome_7-9" data-name="Gradiente sem nome 7" x1="-31.25" y1="42.29" x2="196.8" y2="42.29" xlink:href="#Gradiente_sem_nome_7"/>
+    <filter id="drop-shadow-55" filterUnits="userSpaceOnUse">
       <feOffset dx=".5" dy=".5"/>
       <feGaussianBlur result="blur" stdDeviation="0"/>
-      <feFlood flood-color="#004684" flood-opacity="1"/>
+      <feFlood flood-color="#002e3b" flood-opacity="1"/>
       <feComposite in2="blur" operator="in"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g class="cls-1">
-    <path class="cls-2" d="M9.75,15.29L5.62,6.29h2.61l3.01,7.31.77,1.69h-2.27ZM8.38,19.11c-.32,0-.68-.06-1.07-.19s-.74-.27-1.04-.44l.88-1.93c.2.11.39.2.57.26.17.07.33.1.46.1.25,0,.47-.07.67-.21.19-.14.35-.34.47-.6l1.06-2.5,2.86-7.31h2.61l-4.09,9.77c-.25.6-.52,1.13-.79,1.59s-.62.82-1.02,1.07c-.4.25-.93.38-1.58.38Z"/>
-    <path class="cls-2" d="M18.94,17.09h-2.34c.56-.78,1.07-1.6,1.52-2.47s.81-1.78,1.07-2.73c.26-.95.4-1.91.4-2.9s-.13-1.96-.4-2.91c-.26-.94-.62-1.85-1.07-2.73s-.96-1.7-1.52-2.47h2.34c.56.73,1.07,1.53,1.52,2.39.45.86.81,1.76,1.07,2.72.26.95.4,1.95.4,3s-.13,2.03-.4,2.99c-.26.96-.62,1.87-1.07,2.73s-.96,1.65-1.52,2.38Z"/>
+  <g class="cls-11">
+    <g id="Grupo_de_máscara_8" data-name="Grupo de máscara 8">
+      <g id="Grupo_260" data-name="Grupo 260">
+        <line id="Linha_154" data-name="Linha 154" class="cls-1" x1="-26.62" y1="114.85" x2="195.53" y2="-78.18"/>
+        <line id="Linha_159" data-name="Linha 159" class="cls-8" x1="-24.87" y1="89.9" x2="197.28" y2="-103.13"/>
+        <line id="Linha_164" data-name="Linha 164" class="cls-7" x1="-23.19" y1="65.95" x2="198.96" y2="-127.08"/>
+        <line id="Linha_169" data-name="Linha 169" class="cls-10" x1="-21.51" y1="41.99" x2="200.64" y2="-151.03"/>
+        <line id="Linha_174" data-name="Linha 174" class="cls-9" x1="-19.76" y1="17.04" x2="202.39" y2="-175.98"/>
+        <line id="Linha_175" data-name="Linha 175" class="cls-5" x1="-33.48" y1="212.65" x2="188.67" y2="19.63"/>
+        <line id="Linha_176" data-name="Linha 176" class="cls-6" x1="-31.8" y1="188.7" x2="190.42" y2="-5.32"/>
+        <line id="Linha_180" data-name="Linha 180" class="cls-3" x1="-30.05" y1="163.75" x2="192.1" y2="-29.27"/>
+        <line id="Linha_181" data-name="Linha 181" class="cls-4" x1="-28.3" y1="138.8" x2="193.85" y2="-54.22"/>
+      </g>
+    </g>
+  </g>
+  <g class="cls-13">
+    <path class="cls-12" d="M9.75,15.29L5.62,6.29h2.61l3.01,7.31.77,1.69h-2.27ZM8.38,19.11c-.32,0-.68-.06-1.07-.19s-.74-.27-1.04-.44l.88-1.93c.2.11.39.2.57.26.17.07.33.1.46.1.25,0,.47-.07.67-.21.19-.14.35-.34.47-.6l1.06-2.5,2.86-7.31h2.61l-4.09,9.77c-.25.6-.52,1.13-.79,1.59s-.62.82-1.02,1.07c-.4.25-.93.38-1.58.38Z"/>
+    <path class="cls-12" d="M18.94,17.09h-2.34c.56-.78,1.07-1.6,1.52-2.47s.81-1.78,1.07-2.73c.26-.95.4-1.91.4-2.9s-.13-1.96-.4-2.91c-.26-.94-.62-1.85-1.07-2.73s-.96-1.7-1.52-2.47h2.34c.56.73,1.07,1.53,1.52,2.39.45.86.81,1.76,1.07,2.72.26.95.4,1.95.4,3s-.13,2.03-.4,2.99c-.26.96-.62,1.87-1.07,2.73s-.96,1.65-1.52,2.38Z"/>
   </g>
 </svg>

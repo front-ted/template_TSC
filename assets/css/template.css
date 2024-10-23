@@ -177,11 +177,11 @@ tbody td:first-child{border-left: 0;}
     border: none;
 }
 .carousel-control-prev{
-    background: url('../images/seta_esq.svg') no-repeat;
+    background: url('../images/esquerda.svg') no-repeat;
     left: -130px;
 }
 .carousel-control-next{
-    background: url('../images/seta_dir.svg') no-repeat;
+    background: url('../images/direita.svg') no-repeat;
     right: -130px;
 }
 .carousel-indicators{
@@ -442,7 +442,7 @@ tbody td:first-child{border-left: 0;}
     top: -25px;
     margin: auto;
     left: -10px;
-    background: url('../images/ico_atividade_desafio.svg') no-repeat;
+    background: url('../images/ico_atividade.svg') no-repeat;
     background-size: contain;
 }
 .box-atividade{
