@@ -89,10 +89,16 @@ $('.mover-fazer').click(function(){
 $('.mover-fazendo').click(function(){
 	var item = $(this).parent().parent().parent().attr('data-item')
 	var aux = $(this).parent().parent().parent().parent().attr('id')
-	var id = parseInt(aux) + 1 
+	var id = 0
 	var grupo = $(this).parent().parent().parent().parent().parent().parent().attr('data-group')
 
-	if ($("#"+ id + "").attr('data-index') == "lista-fazendo"){
+	if($(this).parent().parent().parent().parent().attr('data-index') == 'lista-fazer'){
+		id = parseInt(aux) + 1
+	} else if ($(this).parent().parent().parent().parent().attr('data-index') == 'lista-feito'){
+		id = parseInt(aux) - 1
+	}
+
+//	if ($("#"+ id + "").attr('data-index') == "lista-fazendo"){
 		$(this).parent().parent().parent().removeClass("fazer")
 		$(this).parent().parent().parent().removeClass("feito")
 		$(this).parent().parent().parent().addClass("fazendo")
@@ -105,7 +111,7 @@ $('.mover-fazendo').click(function(){
 
 		var salvarItem = {"grupo": id, "item": item, "uc": uc}
 		localStorage.setItem(item,JSON.stringify(salvarItem))
-	}
+//	}
 
 	verificaCompleto(grupo)
 })
@@ -117,7 +123,7 @@ $('.mover-feito').click(function(){
 	var grupo = $(this).parent().parent().parent().parent().parent().parent().attr('data-group')
 	
 	if($(this).parent().parent().parent().parent().attr('data-index') == 'lista-fazer'){
-		id = parseInt(aux) + 2 
+		id = parseInt(aux) + 2
 	} else if ($(this).parent().parent().parent().parent().attr('data-index') == 'lista-fazendo'){
 		id = parseInt(aux) + 1
 	}
@@ -129,11 +135,12 @@ $('.mover-feito').click(function(){
 	$("li[data-item='"+item+"'").prependTo($("#"+ id + ""))
 
 	$("li[data-item='"+item+"'] .dropdown-menu li.mover-fazer").show()
-	$("li[data-item='"+item+"'] .dropdown-menu li.mover-feito").hide()
 	$("li[data-item='"+item+"'] .dropdown-menu li.mover-fazendo").show()
+	$("li[data-item='"+item+"'] .dropdown-menu li.mover-feito").hide()
 
 	var salvarItem = {"grupo": id, "item": item, "uc": uc}
 	localStorage.setItem(item,JSON.stringify(salvarItem))
+	
 	verificaCompleto(grupo)
 
 })
