@@ -3,7 +3,7 @@
 	Variáveis em cascata para facilitar a mudança de cores de um curso para o outro.
 */
 :root{
-	--cor-primaria: #92ACCE;
+	--cor-primaria: #92acce;
 	--cor-secundaria: #207893;
 	--cor-terciaria: #002e3b;
 
@@ -25,6 +25,12 @@
 	radial-gradient(farthest-corner at 0 100%, var(--cor-secundaria) 0%, transparent 60%), 
 	linear-gradient(180deg, var(--cor-primaria) 0%, #fff 100%);
 }
+
+/*ALTERAR MANUAL PARA TODOS OS CURSOS*/
+.bt-objeto .camada-blur{
+	background: rgba(146, 172, 206, 0.6);
+}
+/*ALTERAR PARA TODOS OS CURSOS*/
 
 /*layout com fundo gradiente*/
 .bg-gradiente{
@@ -102,7 +108,11 @@ td{
 	background: var(--cor-primaria);
 	border-color: var(--cor-primaria)
 }
-
+.botao:hover{
+	color: #fff;
+	background: var(--cor-primaria);
+}
+.bt-objeto:hover::after{color: var(--cor-primaria);}
 /*elementos que levam a cor secundária*/
 mark{background: var(--cor-secundaria);}
 
