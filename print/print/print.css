@@ -168,6 +168,7 @@
   .accordion-item{
     page-break-inside: avoid;
   }
+  .accordion-header button{font-size: 16pt;}
 
   /*carousel*/
   .carousel{
