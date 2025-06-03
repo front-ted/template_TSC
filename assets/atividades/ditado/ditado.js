@@ -1,3 +1,5 @@
+const PATHAUDIO = "../assets/atividades/ditado/audios";
+const DELAY = 1500;
 const animate = [
   {
     width: "0%",
@@ -34,152 +36,152 @@ const msgFeedbacks = {
 const listaPalavras = [
   {
     palavra: "Superstição",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra1.mp3`,
     feedback: null,
   },
   {
     palavra: "Concessão",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra2.mp3`,
     feedback: null,
   },
   {
     palavra: "Seiscentos",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra3.mp3`,
     feedback: null,
   },
   {
     palavra: "Azia",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra4.mp3`,
     feedback: null,
   },
   {
     palavra: "Recessão",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra5.mp3`,
     feedback: null,
   },
   {
     palavra: "Exprimir",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra6.mp3`,
     feedback: null,
   },
   {
     palavra: "Hediondo",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra7.mp3`,
     feedback: null,
   },
   {
     palavra: "Assepsia",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra8.mp3`,
     feedback: null,
   },
   {
     palavra: "Companhia",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra9.mp3`,
     feedback: null,
   },
   {
     palavra: "Fugaz",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra10.mp3`,
     feedback: null,
   },
   {
     palavra: "Ironizar",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra11.mp3`,
     feedback: null,
   },
   {
     palavra: "Visando",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra12.mp3`,
     feedback: null,
   },
   {
     palavra: "Escassez",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra13.mp3`,
     feedback: null,
   },
   {
     palavra: "Contencioso",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra14.mp3`,
     feedback: null,
   },
   {
     palavra: "Assertivo",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra15.mp3`,
     feedback: null,
   },
   {
     palavra: "Extorsão",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra16.mp3`,
     feedback: null,
   },
   {
     palavra: "Ansioso",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra17.mp3`,
     feedback: null,
   },
   {
     palavra: "Subsídio",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra18.mp3`,
     feedback: null,
   },
   {
     palavra: "Consternação",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra19.mp3`,
     feedback: null,
   },
   {
     palavra: "Assessoria",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra20.mp3`,
     feedback: null,
   },
   {
     palavra: "Excepcional",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra21.mp3`,
     feedback: null,
   },
   {
     palavra: "Acedioso",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra22.mp3`,
     feedback: null,
   },
   {
     palavra: "Exaustivo",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra23.mp3`,
     feedback: null,
   },
   {
     palavra: "Premissa",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra24.mp3`,
     feedback: null,
   },
   {
     palavra: "Obcecado",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra25.mp3`,
     feedback: null,
   },
   {
     palavra: "Excelência",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra26.mp3`,
     feedback: null,
   },
   {
     palavra: "Sexagésimo",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra27.mp3`,
     feedback: null,
   },
   {
     palavra: "Etnia",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra28.mp3`,
     feedback: null,
   },
   {
     palavra: "Propensão",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra29.mp3`,
     feedback: null,
   },
   {
     palavra: "Exuberância",
-    audio: "",
+    audio: `${PATHAUDIO}/palavra30.mp3`,
     feedback: null,
   },
 ];
@@ -199,6 +201,7 @@ let indexAtual = 0;
 let indexAux = 0;
 let audioAtual;
 let segundaChance = false;
+let segundaChanceControle = false;
 
 const atualizaHeader = (nivel, node) => {
   node.innerHTML = "";
@@ -243,7 +246,7 @@ iniciar.addEventListener("click", (e) => {
   enunciado.classList.add("d-none");
   atividadeN1.classList.remove("d-none");
   nivel = 1;
-  //audioAtual = new Audio(n1[indexAtual].audio)
+  audioAtual = new Audio(n1[indexAtual].audio);
   atualizaHeader(nivel, headerN1);
 });
 
@@ -263,10 +266,10 @@ const playN1 = atividadeN1.querySelector(".play");
 const playN2 = atividadeN2.querySelector(".play");
 const playN3 = atividadeN3.querySelector(".play");
 playN1.addEventListener("click", (e) => {
-  //const duration = audioAtual.duration;
-  const duration = 2;
+  const duration = audioAtual.duration;
+  //const duration = 2;
   animateConfig.duration = duration * 1000;
-  //audioAtual.play();
+  audioAtual.play();
   trackN1.animate(animate, animateConfig);
   playN1.querySelector("img").setAttribute("src", imgAudio.pause);
   trackN1.addEventListener("animationend", (e) => {
@@ -275,10 +278,10 @@ playN1.addEventListener("click", (e) => {
   });
 });
 playN2.addEventListener("click", (e) => {
-  //const duration = audioAtual.duration;
-  const duration = 2;
+  const duration = audioAtual.duration;
+  //const duration = 2;
   animateConfig.duration = duration * 1000;
-  //audioAtual.play();
+  audioAtual.play();
   trackN2.animate(animate, animateConfig);
   playN2.querySelector("img").setAttribute("src", imgAudio.pause);
   trackN2.addEventListener("animationend", (e) => {
@@ -287,10 +290,10 @@ playN2.addEventListener("click", (e) => {
   });
 });
 playN3.addEventListener("click", (e) => {
-  //const duration = audioAtual.duration;
-  const duration = 2;
+  const duration = audioAtual.duration;
+  //const duration = 2;
   animateConfig.duration = duration * 1000;
-  //audioAtual.play();
+  audioAtual.play();
   trackN3.animate(animate, animateConfig);
   playN3.querySelector("img").setAttribute("src", imgAudio.pause);
   trackN3.addEventListener("animationend", (e) => {
@@ -324,6 +327,7 @@ iniciarRevisaoN1.addEventListener("click", (e) => {
   audioN1.classList.remove("d-none");
   respostaN1.classList.remove("d-none");
   indexAtual = n1.findIndex((n) => n.feedback === "Errado");
+  audioAtual = new Audio(n1[indexAtual].audio);
   atualizaHeader(nivel, headerN1);
 });
 iniciarRevisaoN2.addEventListener("click", (e) => {
@@ -333,6 +337,7 @@ iniciarRevisaoN2.addEventListener("click", (e) => {
   respostaN2.classList.remove("d-none");
   atualizaHeader(nivel, headerN2);
   indexAtual = n2.findIndex((n) => n.feedback === "Errado");
+  audioAtual = new Audio(n2[indexAtual].audio);
 });
 iniciarRevisaoN3.addEventListener("click", (e) => {
   e.preventDefault();
@@ -341,278 +346,236 @@ iniciarRevisaoN3.addEventListener("click", (e) => {
   respostaN3.classList.remove("d-none");
   atualizaHeader(nivel, headerN3);
   indexAtual = n3.findIndex((n) => n.feedback === "Errado");
+  audioAtual = new Audio(n3[indexAtual].audio);
 });
+
+const atualizaVariavel = (nivel) => {
+  let auxArray,
+    auxResposta,
+    auxAudio,
+    auxHeader,
+    auxTrack,
+    auxPlay,
+    auxAtividade,
+    auxProximo,
+    auxHeaderProximo,
+    auxRevisao;
+  if (nivel === 1) {
+    auxArray = n1;
+    auxResposta = respostaN1;
+    auxAudio = audioN1;
+    auxHeader = headerN1;
+    auxTrack = trackN1;
+    auxPlay = playN1;
+    auxRevisao = revisaoN1;
+    auxAtividade = atividadeN1;
+    auxProximo = atividadeN2;
+    auxHeaderProximo = headerN2;
+  } else if (nivel === 2) {
+    auxArray = n2;
+    auxResposta = respostaN2;
+    auxRevisao = revisaoN2;
+    auxAudio = audioN2;
+    auxHeader = headerN2;
+    auxTrack = trackN2;
+    auxPlay = playN2;
+    auxAtividade = atividadeN2;
+    auxProximo = atividadeN3;
+    auxHeaderProximo = headerN3;
+  } else {
+    auxArray = n3;
+    auxRevisao = revisaoN3;
+    auxResposta = respostaN3;
+    auxAudio = audioN3;
+    auxHeader = headerN3;
+    auxTrack = trackN3;
+    auxPlay = playN3;
+    auxAtividade = atividadeN3;
+  }
+
+  return {
+    auxArray,
+    auxResposta,
+    auxAudio,
+    auxHeader,
+    auxTrack,
+    auxPlay,
+    auxAtividade,
+    auxHeaderProximo,
+    auxProximo,
+    auxRevisao,
+  };
+};
 
 btnsEnviar.forEach((enviar, i) => {
   enviar.addEventListener("click", (e) => {
-    let auxArray,
-      auxResposta,
-      auxAudio,
-      auxHeader,
-      auxTrack,
-      auxPlay,
-      auxAtividade,
-      auxRevisao;
-    if (nivel === 1) {
-      auxArray = n1;
-      auxResposta = respostaN1;
-      auxAudio = audioN1;
-      auxHeader = headerN1;
-      auxTrack = trackN1;
-      auxPlay = playN1;
-      auxRevisao = revisaoN1;
-      auxAtividade = atividadeN1;
-      auxProximo = atividadeN2;
-      auxHeaderProximo = headerN2;
-    } else if (nivel === 2) {
-      auxArray = n2;
-      auxResposta = respostaN2;
-      auxRevisao = revisaoN2;
-      auxAudio = audioN2;
-      auxHeader = headerN2;
-      auxTrack = trackN2;
-      auxPlay = playN2;
-      auxAtividade = atividadeN2;
-      auxProximo = atividadeN3;
-      auxHeaderProximo = headerN3;
-    } else {
-      auxArray = n3;
-      auxRevisao = revisaoN3;
-      auxResposta = respostaN3;
-      auxAudio = audioN3;
-      auxHeader = headerN3;
-      auxTrack = trackN3;
-      auxPlay = playN3;
-      auxAtividade = atividadeN3;
-    }
     e.preventDefault();
     enviar.classList.add("disabled");
-    const input = auxAtividade.querySelector(".campo");
-    const value = input.value.toLocaleLowerCase().trim();
-    const palavra = auxArray[indexAtual]
-      ? auxArray[indexAtual].palavra.toLocaleLowerCase().trim()
+    const input = atualizaVariavel(nivel).auxAtividade.querySelector(".campo");
+    let value = input.value.toLocaleLowerCase().trim();
+    let palavra = atualizaVariavel(nivel).auxArray[indexAtual]
+      ? atualizaVariavel(nivel)
+          .auxArray[indexAtual].palavra.toLocaleLowerCase()
+          .trim()
       : "";
 
     if (value === palavra && !segundaChance && palavra) {
-      auxArray[indexAtual].feedback = "Correto";
-      auxResposta.classList.add("correta");
-      auxResposta.insertAdjacentHTML(
+      atualizaVariavel(nivel).auxArray[indexAtual].feedback = "Correto";
+      atualizaVariavel(nivel).auxResposta.classList.add("correta");
+      atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
         "beforeend",
         `<img class="img" src="${imgFeedbacks.correto}">`
       );
-      auxResposta.insertAdjacentHTML(
+      atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
         "beforeend",
         `<p class="feed">${msgFeedbacks.correto}</p>`
       );
     } else if (!segundaChance && palavra) {
-      auxArray[indexAtual].feedback = "Errado";
-      auxResposta.classList.add("errada");
-      auxResposta.insertAdjacentHTML(
+      atualizaVariavel(nivel).auxArray[indexAtual].feedback = "Errado";
+      atualizaVariavel(nivel).auxResposta.classList.add("errada");
+      atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
         "beforeend",
         `<img class="img" src="${imgFeedbacks.errado}">`
       );
-      auxResposta.insertAdjacentHTML(
+      atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
         "beforeend",
         `<p class="feed">${msgFeedbacks.errado}</p>`
       );
-      palavrasErradas.push(auxArray[indexAtual]);
+      palavrasErradas.push(atualizaVariavel(nivel).auxArray[indexAtual]);
     }
-    if (!segundaChance) indexAtual++;
-    if (indexAtual >= auxArray.length && !segundaChance) {
-      if (auxArray.some((n) => n.feedback === "Errado")) {
-        auxAudio.classList.add("d-none");
-        auxResposta.classList.add("d-none");
-        auxRevisao.classList.remove("d-none");
+    if (!segundaChance) {
+      atualizaVariavel(nivel).auxArray[indexAtual].segundaChance = false;
+      indexAtual++;
+      audioAtual = atualizaVariavel(nivel).auxArray[indexAtual]
+        ? new Audio(atualizaVariavel(nivel).auxArray[indexAtual].audio)
+        : "";
+    }
+    if (
+      indexAtual >= atualizaVariavel(nivel).auxArray.length &&
+      !segundaChance
+    ) {
+      if (
+        atualizaVariavel(nivel).auxArray.some((n) => n.feedback === "Errado")
+      ) {
+        atualizaVariavel(nivel).auxAudio.classList.add("d-none");
+        atualizaVariavel(nivel).auxResposta.classList.add("d-none");
+        atualizaVariavel(nivel).auxRevisao.classList.remove("d-none");
         segundaChance = true;
         indexAtual = 0;
+        audioAtual = new Audio(
+          atualizaVariavel(nivel).auxArray[indexAtual].audio
+        );
       } else {
         indexAtual = 0;
         palavrasErradas = [];
         segundaChance = false;
         indexAux = 0;
-        nivel++;
+
         setTimeout(() => {
-          auxAtividade.classList.add("d-none");
-          if (nivel !== 4) auxProximo.classList.remove("d-none");
-          if (nivel !== 4) atualizaHeader(nivel, auxHeaderProximo);
-          if (nivel === 4) carregaFim();
-        }, 1500);
+          atualizaVariavel(nivel).auxAtividade.classList.add("d-none");
+          if (nivel === 3) {
+            carregaFim();
+          } else {
+            atualizaVariavel(nivel).auxProximo.classList.remove("d-none");
+            nivel++;
+            audioAtual = new Audio(
+              atualizaVariavel(nivel).auxArray[indexAtual].audio
+            );
+            atualizaHeader(nivel, atualizaVariavel(nivel).auxHeader);
+          }
+        }, DELAY);
       }
     }
-    if (!segundaChance) atualizaHeader(nivel, auxHeader);
-    if (segundaChance) {
+    if (!segundaChance)
+      atualizaHeader(nivel, atualizaVariavel(nivel).auxHeader);
+    if (segundaChance && segundaChanceControle) {
+      palavra = atualizaVariavel(nivel).auxArray[indexAtual]
+        ? atualizaVariavel(nivel)
+            .auxArray[indexAtual].palavra.toLocaleLowerCase()
+            .trim()
+        : "";
       if (value === palavra && palavra) {
-        auxArray[indexAtual].feedback = "Meio Certo";
-        auxResposta.classList.add("correta");
-        auxResposta.insertAdjacentHTML(
+        atualizaVariavel(nivel).auxArray[indexAtual].feedback = "Meio Certo";
+        atualizaVariavel(nivel).auxResposta.classList.add("correta");
+        atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
           "beforeend",
           `<img class="img" src="${imgFeedbacks.correto}">`
         );
-        auxResposta.insertAdjacentHTML(
+        atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
           "beforeend",
           `<p class="feed">${msgFeedbacks.correto}</p>`
         );
       } else {
-        auxResposta.classList.add("errada");
-        auxResposta.insertAdjacentHTML(
+        atualizaVariavel(nivel).auxResposta.classList.add("errada");
+        atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
           "beforeend",
           `<img class="img" src="${imgFeedbacks.errado}">`
         );
-        auxResposta.insertAdjacentHTML(
+        atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
           "beforeend",
           `<p class="feed">${msgFeedbacks.erradoFim}</p>`
         );
+        atualizaVariavel(nivel).auxArray[indexAtual].segundaChance = true;
       }
       indexAux++;
-      indexAtual = auxArray.findIndex((n) => n.feedback === "Errado");
-      atualizaHeader(nivel, auxHeader);
+      indexAtual = atualizaVariavel(nivel).auxArray.findIndex(
+        (n) => n.feedback === "Errado" && !n.segundaChance
+      );
+      audioAtual = atualizaVariavel(nivel).auxArray[indexAtual]
+        ? new Audio(atualizaVariavel(nivel).auxArray[indexAtual].audio)
+        : "";
+      atualizaHeader(nivel, atualizaVariavel(nivel).auxHeader);
       if (indexAux >= palavrasErradas.length) {
-        nivel++;
         segundaChance = false;
         indexAtual = 0;
         indexAux = 0;
         palavrasErradas = [];
+        segundaChanceControle = false;
         setTimeout(() => {
-          auxAtividade.classList.add("d-none");
-          if (nivel === 4) {
+          atualizaVariavel(nivel).auxAtividade.classList.add("d-none");
+          if (nivel === 3) {
             carregaFim();
           } else {
-            auxProximo.classList.remove("d-none");
-            atualizaHeader(nivel, auxHeaderProximo);
+            atualizaVariavel(nivel).auxProximo.classList.remove("d-none");
+            nivel++;
+            audioAtual = new Audio(
+              atualizaVariavel(nivel).auxArray[indexAtual].audio
+            );
+            atualizaHeader(nivel, atualizaVariavel(nivel).auxHeader);
           }
-        }, 1500);
+        }, DELAY);
       }
     }
-    auxPlay.querySelector("img").setAttribute("src", imgAudio.play);
-    auxTrack.animate([{ width: "0%" }], { duration: 0, fill: "forwards" });
-    if (indexAtual === auxArray.length / 2) {
-      auxResposta.insertAdjacentHTML(
+    if (segundaChance) segundaChanceControle = true;
+    atualizaVariavel(nivel)
+      .auxPlay.querySelector("img")
+      .setAttribute("src", imgAudio.play);
+    atualizaVariavel(nivel).auxTrack.animate([{ width: "0%" }], {
+      duration: 0,
+      fill: "forwards",
+    });
+    if (indexAtual === atualizaVariavel(nivel).auxArray.length / 2) {
+      atualizaVariavel(nivel).auxResposta.insertAdjacentHTML(
         "beforeend",
         `<p class="motivacao">${msgFeedbacks.metadeNivel}</p>`
       );
     }
     setTimeout(() => {
-      auxAtividade.querySelectorAll(".img").forEach((img) => img.remove());
-      auxAtividade.querySelectorAll(".feed").forEach((feed) => feed.remove());
-      auxAtividade
-        .querySelectorAll(".motivacao")
+      atualizaVariavel(nivel)
+        .auxAtividade.querySelectorAll(".img")
+        .forEach((img) => img.remove());
+      atualizaVariavel(nivel)
+        .auxAtividade.querySelectorAll(".feed")
         .forEach((feed) => feed.remove());
-      auxResposta.classList.remove("correta", "errada");
+      atualizaVariavel(nivel)
+        .auxAtividade.querySelectorAll(".motivacao")
+        .forEach((feed) => feed.remove());
+      atualizaVariavel(nivel).auxResposta.classList.remove("correta", "errada");
       enviar.classList.remove("disabled");
       input.value = "";
-    }, 1500);
+    }, DELAY);
   });
 });
-
-// enviarN1.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   enviarN1.classList.add("disabled");
-//   const input = atividadeN1.querySelector(".campo");
-//   const value = input.value.toLocaleLowerCase().trim();
-//   const palavra = n1[indexAtual]
-//     ? n1[indexAtual].palavra.toLocaleLowerCase().trim()
-//     : "";
-
-//   if (value === palavra && !segundaChance && palavra) {
-//     n1[indexAtual].feedback = "Correto";
-//     respostaN1.classList.add("correta");
-//     respostaN1.insertAdjacentHTML(
-//       "beforeend",
-//       `<img class="img" src="${imgFeedbacks.correto}">`
-//     );
-//     respostaN1.insertAdjacentHTML(
-//       "beforeend",
-//       `<p class="feed">${msgFeedbacks.correto}</p>`
-//     );
-//   } else if (!segundaChance && palavra) {
-//     n1[indexAtual].feedback = "Errado";
-//     respostaN1.classList.add("errada");
-//     respostaN1.insertAdjacentHTML(
-//       "beforeend",
-//       `<img class="img" src="${imgFeedbacks.errado}">`
-//     );
-//     respostaN1.insertAdjacentHTML(
-//       "beforeend",
-//       `<p class="feed">${msgFeedbacks.errado}</p>`
-//     );
-//     palavrasErradas.push(n1[indexAtual]);
-//   }
-//   if (!segundaChance) indexAtual++;
-//   if (indexAtual >= n1.length && !segundaChance) {
-//     if (n1.some((n) => n.feedback === "Errado")) {
-//       audioN1.classList.add("d-none");
-//       respostaN1.classList.add("d-none");
-//       revisaoN1.classList.remove("d-none");
-//       segundaChance = true;
-//       indexAtual = 0;
-//     } else {
-//       atividadeN1.classList.add("d-none");
-//       atividadeN2.classList.remove("d-none");
-//       indexAtual = 0;
-//       palavrasErradas = [];
-//       segundaChance = false;
-//       indexAux = 0;
-//       nivel++;
-//       atualizaHeader(nivel, headerN2);
-//     }
-//   }
-//   if (!segundaChance) atualizaHeader(nivel, headerN1);
-//   if (segundaChance) {
-//     if (value === palavra && palavra) {
-//       n1[indexAtual].feedback = "Meio Certo";
-//       respostaN1.classList.add("correta");
-//       respostaN1.insertAdjacentHTML(
-//         "beforeend",
-//         `<img class="img" src="${imgFeedbacks.correto}">`
-//       );
-//       respostaN1.insertAdjacentHTML(
-//         "beforeend",
-//         `<p class="feed">${msgFeedbacks.correto}</p>`
-//       );
-//     } else {
-//       respostaN1.classList.add("errada");
-//       respostaN1.insertAdjacentHTML(
-//         "beforeend",
-//         `<img class="img" src="${imgFeedbacks.errado}">`
-//       );
-//       respostaN1.insertAdjacentHTML(
-//         "beforeend",
-//         `<p class="feed">${msgFeedbacks.erradoFim}</p>`
-//       );
-//     }
-//     indexAux++;
-//     indexAtual = n1.findIndex((n) => n.feedback === "Errado");
-//     atualizaHeader(nivel, headerN1);
-//     if (indexAux >= palavrasErradas.length) {
-//       nivel++;
-//       segundaChance = false;
-//       indexAtual = 0;
-//       indexAux = 0;
-//       palavrasErradas = [];
-//       setTimeout(() => {
-//         atividadeN1.classList.add("d-none");
-//         atividadeN2.classList.remove("d-none");
-//         atualizaHeader(nivel, headerN2);
-//       }, 1500);
-//     }
-//   }
-//   playN1.querySelector("img").setAttribute("src", imgAudio.play);
-//   trackN1.animate([{ width: "0%" }], { duration: 0, fill: "forwards" });
-//   if (indexAtual === n1.length / 2) {
-//     respostaN1.insertAdjacentHTML(
-//       "beforeend",
-//       `<p class="motivacao">${msgFeedbacks.metadeNivel}</p>`
-//     );
-//   }
-//   setTimeout(() => {
-//     atividadeN1.querySelectorAll(".img").forEach((img) => img.remove());
-//     atividadeN1.querySelectorAll(".feed").forEach((feed) => feed.remove());
-//     atividadeN1.querySelectorAll(".motivacao").forEach((feed) => feed.remove());
-//     respostaN1.classList.remove("correta", "errada");
-//     enviarN1.classList.remove("disabled");
-//     input.value = "";
-//   }, 1500);
-// });
 
 const carregaFim = () => {
   const fim = ditado.querySelector(".fim");
