@@ -1,0 +1,202 @@
+.ditado {
+  background-color: #d9d9d9;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  p {
+    margin: 0;
+  }
+
+  .enunciado,
+  .feedbackRevisao,
+  .fim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 75%;
+    gap: 25px;
+    .titulo {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .descricao {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .iniciar,
+    .reiniciar {
+      border: none;
+      border-radius: 20px;
+      padding: 10px 25px;
+      color: #d9d9d9;
+      background-color: #7d7d7d;
+    }
+  }
+  .fim {
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 16px;
+      border: 1px solid #7d7d7d;
+      padding: 5px;
+      border-radius: 50px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 25px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .atividade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+    .header {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 16px;
+      border: 1px solid #7d7d7d;
+      padding: 5px;
+      border-radius: 50px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 25px;
+          height: auto;
+          &.light {
+            filter: brightness(0.1);
+          }
+        }
+      }
+    }
+    .audio {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      .play {
+        border: none;
+        background-color: transparent;
+        img {
+          width: 50px;
+          height: auto;
+          cursor: pointer;
+          &:hover {
+            filter: brightness(0.7);
+          }
+        }
+      }
+      .track {
+        position: relative;
+        width: 100%;
+        background-color: #7d7d7d;
+        mask-image: url("./img/image.png");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-position: left center;
+        .mask {
+          position: absolute;
+          content: "";
+          background-color: black;
+          top: 0;
+          left: 0;
+          height: 100%;
+        }
+      }
+    }
+    .resposta {
+      position: relative;
+      height: 30px;
+      width: 70%;
+      &.correta,
+      &.errada {
+        .feed {
+          margin: 20px 0 0 0;
+          text-align: center;
+        }
+      }
+      .motivacao {
+        color: #3f824c;
+        margin: 20px 0 0 0;
+        text-align: center;
+      }
+      &.correta {
+        .img {
+          top: 50%;
+          width: 30px;
+          height: 30px;
+          left: 0;
+          transform: translate(-100%, -50%);
+          position: absolute;
+        }
+        .feed {
+          color: #3f824c;
+        }
+      }
+      &.errada {
+        .img {
+          top: 50%;
+          width: 30px;
+          height: 30px;
+          left: 0;
+          transform: translate(-100%, -50%);
+          position: absolute;
+        }
+        .feed {
+          color: #ed8282;
+        }
+      }
+      .campo {
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid #7d7d7d;
+        padding: 5px;
+        height: 30px;
+        font-size: 1.2rem;
+      }
+      .enviar {
+        position: absolute;
+        top: 2px;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 10px 10px 0;
+        border: none;
+        background-color: #7d7d7d;
+        padding: 0 15px;
+        display: grid;
+        place-content: center;
+        img {
+          width: 15px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
