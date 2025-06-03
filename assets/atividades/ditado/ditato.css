@@ -48,6 +48,7 @@
       border: 1px solid #7d7d7d;
       padding: 5px;
       border-radius: 50px;
+      flex-wrap: wrap;
       div {
         display: flex;
         align-items: center;
@@ -78,6 +79,11 @@
       border: 1px solid #7d7d7d;
       padding: 5px;
       border-radius: 50px;
+      flex-wrap: wrap;
+      @media (max-width: 991px) {
+        right: 20px;
+        left: 20px;
+      }
       div {
         display: flex;
         align-items: center;
@@ -129,6 +135,10 @@
       position: relative;
       height: 30px;
       width: 70%;
+      @media (max-width: 991px) {
+        width: 100%;
+        height: 45px;
+      }
       &.correta,
       &.errada {
         .feed {
@@ -174,6 +184,9 @@
         padding: 5px;
         height: 30px;
         font-size: 1.2rem;
+        @media (max-width: 991px) {
+          height: 45px;
+        }
       }
       .enviar {
         position: absolute;
